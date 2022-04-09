@@ -30,7 +30,12 @@ app.set('view engine', 'ejs');
 app.enable('trust proxy')
 app.use(cors())
 app.options('*', cors())
-app.use(logger('dev'))
+
+if (process.env.NODE_ENV === 'production')
+    app.use(logger('combined'))
+else
+    app.use(logger('dev'))
+
 app.use(cookieParser(process.env.COOKIE_SECRET))
 app.use(express.json())
 app.use(methodOverride('_method'))

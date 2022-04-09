@@ -3,9 +3,7 @@ services:
   nginx:
     image: nginx:stable-alpine
     networks:
-      - phitau-portal
-    ports:
-      - "80:80"
+      - pkt-network
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
@@ -15,13 +13,10 @@ services:
     build: .
     image: mar436/phitauportal
     networks:
-      - phitau-portal
-    volumes:
-      - .:/app
-      - /app/node_modules
+      - pkt-network
     env_file:
       - ./.env
 
 networks:
-  phitau-portal:
+  pkt-network:
     driver: bridge

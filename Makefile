@@ -7,8 +7,11 @@ push:
 pull:
 	@docker-compose pull node-app
 
-up: 
-	@docker-compose up -d --build --scale node-app=3
+up-dev: 
+	@docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build --scale node-app=3
+
+up-prod:
+	@docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build --scale node-app=3
 
 down: 
 	@docker-compose down -v
@@ -16,11 +19,23 @@ down:
 list:
 	@docker ps
 
-# bash:
-# 	@docker exec -it node-app bash
+logs-1:
+	@docker logs -f phitauportal_node-app_1
 
-# logs:
-# 	@docker logs -f node-app
+logs-2:
+	@docker logs -f phitauportal_node-app_2
+
+logs-3:
+	@docker logs -f phitauportal_node-app_3
+
+bash-1:
+	@docker exec -it phitauportal_node-app_1 bash
+
+bash-2:
+	@docker exec -it phitauportal_node-app_1 bash
+
+bash-3:
+	@docker exec -it phitauportal_node-app_1 bash
 
 clean:
 	@echo "Cleaning directory..."
