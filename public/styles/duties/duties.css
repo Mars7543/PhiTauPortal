@@ -1,0 +1,133 @@
+.key {
+    width: 75vw;
+    margin-top: 5rem;
+    padding: 1rem 5rem;
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+
+    color: #2c3e50;
+}
+
+.key h1 {
+    font-size: 4rem;
+}
+
+.key div {
+    width: 15rem;
+    height: 6rem;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+}
+
+.key .upcoming {
+    background-color: #2ecc71;
+}
+
+.key .incomplete {
+    background-color: #f1c40f;
+}
+
+.key .missed {
+    background-color: #e74c3c;
+}
+
+.key .complete {
+    border: 1px solid black;
+}
+
+.duties-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5rem;
+    margin-top: 5rem;
+    gap: 7rem;
+}
+
+.duties-view .duty-type {
+    width: 50rem;
+    padding: 1rem 5rem 3rem 5rem;
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.duties-view .duty-type h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+.duties-view thead, .duties-view tbody {
+    display: block;
+    width: 100%;
+}
+
+.duties-view tbody {
+    overflow-y: scroll;
+    height: 48rem;
+}
+
+.duties-view table tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+}
+
+.duties-view table tr.no-duties td {
+    width: 100%;
+    text-align: center;
+}
+
+.duties-view table th {
+    color: #34495e;
+    font-size: 2.5rem;
+}
+
+.duties-view table td {
+    color: #505959;
+    font-size: 1.85rem;
+    padding: 0 1rem;
+}
+
+.duties-view table th:nth-child(1), .duties-view td:nth-child(1) {
+    width: 25%;
+    text-align: left;
+}
+
+.duties-view table th:nth-child(2), .duties-view td:nth-child(2) {
+    width: 50%;
+    text-align: center;
+}
+
+.duties-view table th:nth-child(3), .duties-view td:nth-child(3) {
+    width: 25%;
+    text-align: right;
+}
+
+.duties-view table th:last-of-type, td:last-of-type {
+    text-align: right;
+}
+
+.duties-view .duties[status="Upcoming"] {
+    background-color: #26e776;
+    border: 0;
+}
+
+.duties-view .duties[status="Incomplete"] {
+    background-color: #f1c40f;
+    border: 0;
+}
+
+.duties-view .duties[status="Missed"] {
+    background-color: #e74c3c;
+    border: 0;
+}

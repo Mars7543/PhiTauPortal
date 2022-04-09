@@ -1,0 +1,22 @@
+const app           = require('../app')
+const { notify }    = require('../sms/sms')
+const http          = require('http')
+const debug         = require('debug')('app:server')
+const mongoose      = require('mongoose')
+
+const port = process.env.PORT || 3000
+app.set('port', port)
+
+// connect to mongodb
+const db = process.env.DB
+mongoose
+    .connect(db)
+    .then(() => {
+        debug('Connected to MongoDB')
+        notify()
+    })
+    .catch(err => debug(`Error connecting to MongoDB:\n${err}`))
+
+// start server
+const server = http.createServer(app)
+server.listen(port, _ => debug(`Running on port ${port}`))

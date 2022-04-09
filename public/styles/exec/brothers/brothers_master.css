@@ -1,0 +1,345 @@
+.container {
+    justify-content: space-evenly;
+}
+
+.page-container {
+    width: 100%;
+    margin-top: 2.5rem;
+    min-height: 118rem;
+    height: 118rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+h1.title {
+    font-size: 5.25rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    color: #192a56;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+/* ========= SELECT CLASS STYLES =========== */
+.class-select {
+    min-height: 7.5rem;
+    width: 46rem;
+
+    margin: 1rem 0 3rem 0;
+
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.class-select.md {
+    width: 42rem;
+}
+
+.class-select p {
+    color: #192a56;
+    font-size: 2rem;
+}
+
+.class-select .input-field, .class-select .select-wrapper input {
+    margin: 0;
+    width: 10rem;
+}
+
+.class-select .select-wrapper input.select-dropdown {
+    font-size: 1.8rem;
+}
+
+/* ========= GENERAL TABLE STYLES =========== */
+.brothers-container {
+    width: 80rem;
+    min-height: 88rem;
+    overflow-y: scroll;
+
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.4);
+
+    margin-bottom: 1.5rem;
+}
+
+table {
+    width: 100%;
+}
+
+table tr {
+    height: 8rem;
+}
+
+table th:first-child, table td:first-child {
+    padding-left: 2.5rem;
+}
+
+table th:last-child, table td:last-child {
+    padding-right: 2.5rem;
+}
+
+th {
+    color: #34495e;
+    font-size: 2.5rem;
+}
+
+.add-brothers, .view-brothers {
+    min-height: 70rem;
+    max-height: 90vh;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ========= ADD BROTHERS STYLES ======== */
+.add-brothers {
+    padding-bottom: 1rem;
+}
+
+.add-brothers tbody tr:last-of-type {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.add-brothers th, .add-brothers td {
+    padding: 1.5rem 1rem;
+}
+
+/* ======= VIEW BROTHERS STYLES ======== */
+.hidden {
+    display: none;
+}
+
+.view-brothers th, .view-brothers td {
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    color: #7f8c8d;
+}
+
+.view-brothers td:not(:nth-child(1), :nth-child(2)) {
+    width: 12rem;
+    text-align: center;
+}
+
+.view-brothers tr td i.material-icons {
+    padding-top: .5rem;
+}
+
+.view-brothers tr td:first-child {
+    padding-left: 2.5rem;
+}
+
+.view-brothers tr {
+    transition: background-color .25s ease;
+}
+
+.view-brothers tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* ======== TOOLTIP ========== */
+
+.material-tooltip {
+    padding: 1.5rem;
+    background-color: #34495e;
+}
+
+.material-tooltip .tooltip-content {
+    font-size: 1.05rem;
+}
+
+/* ======== FORM STYLES ========= */
+
+input {
+    color: #7f8fa6;
+}
+
+::-moz-placeholder{
+    color:#a9a9a9;
+    opacity:1
+}
+
+:-ms-input-placeholder{
+    color:#a9a9a9;
+}
+
+::-webkit-input-placeholder{
+    color:#a9a9a9;
+}
+
+.submit-brothers {
+    height: 5rem;
+    min-height: 5rem;
+    width: 10rem;
+    background-color: #2ecc71;
+
+    font-size: 2rem;
+    text-transform: none;
+    padding-top: .25rem;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: box-shadow .35s ease, background-color .35s ease;
+
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.submit-brothers:hover {
+    box-shadow: 0 .1rem .25rem rgba(0, 0, 0, 0.4);
+    background-color: #2ecc71;
+}
+
+/* ========= ACTION BUTTON STYLES ========== */
+
+i.action-icon {
+    font-size: 3rem;
+    cursor: pointer;
+    transition: text-shadow .3s ease, color .3s ease;
+    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+i.action-icon:hover {
+    text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+}
+
+i.edit-row {
+    color: #3498db;
+}
+
+i.edit-row:active {
+    color: #2980b9;
+}
+
+i.delete-row {
+    color: #e74c3c;
+    user-select: none;
+}
+
+i.delete-row:active {
+    color: #c0392b;
+}
+
+.add-brothers tbody tr:last-child i.action-icon.delete-row {
+    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+.add-brothers tbody tr:last-child .delete-row:active {
+    color: #e74c3c;   
+}
+
+/* ========= Edit Modal =========== */
+#edit-brother {
+    max-width: 60rem;
+    min-height: 40rem;
+    padding-bottom: 2rem;
+}
+
+#edit-brother .modal-content {
+    padding-bottom: 0;
+}
+
+#edit-brother .edit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#edit-brother h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin: 1rem 0 3.5rem 0;
+}
+
+#edit-brother .form-field {
+    height: 7rem;
+    width: 40rem;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+
+#edit-brother .form-field:nth-child(3) {
+    height: 3rem;
+    width: 50rem;
+}
+
+#edit-brother .form-field:last-of-type {
+    justify-content: left;
+    margin-top: 1.75rem;
+    width: 40rem;
+}
+
+#edit-brother .form-field:last-of-type .input-field{
+    width: 40rem;
+}
+
+#edit-brother .checkbox label span{
+    font-size: 1.75rem;   
+}
+
+#edit-brother .input-field {
+    width: 20rem;
+}
+
+#edit-brother input {
+    font-size: 1.7rem;
+}
+
+#edit-brother label {
+    line-height: 1rem;
+    font-size: 1.5rem;
+}
+
+#edit-brother #class-label {
+    font-size: 1.25rem;
+}
+
+#edit-brother .modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-buttons {
+    width: 300px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#edit-brother .modal-buttons button {
+    height: 50px;
+    width: 100px;
+}
+
+.modal-close.close {
+    background-color: #34495e;
+}
+
+.edit{
+    background-color: #3498db;
+}
+
+.edit:hover, .edit:active {
+    background-color: #2980b9
+}
+
+/* input.select-dropdown.dropdown-trigger {
+    color: #7f8fa6 !important;
+} */

@@ -1,0 +1,30 @@
+.card-stacked .sign-in-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn.sign-in {
+    margin-top: 5rem;
+
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, .4);
+    background-color: rgba(52, 73, 94);
+    color: white;
+    opacity: .85;
+
+    width: 27rem;
+    height: 6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    letter-spacing: .5px;
+
+    transition: opacity .2s;
+}
+
+.btn.sign-in:hover {
+    opacity: .95;
+}

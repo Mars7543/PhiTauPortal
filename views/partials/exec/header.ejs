@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Source+Sans+3:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/static/styles/normalize.css">
+    <link rel="stylesheet" href="/static/styles/general_styles.css">
+    <link rel="stylesheet" href="/static/styles/index/index.css">
+    <% for (let style of styles) { %>
+        <link rel="stylesheet" href="/static/styles/<%= style %>">
+    <% } %>
+</head>
+<body>
+    <div class="navbar">
+        <div class="home">
+            <a href="/"><img src="/static/images/PKT_COA.png" alt="PKT Coat of Arms"></a>
+            <a href="/" class="heading">Phi Kappa Tau</a>
+        </div>
+    
+        <% if (user) { %>
+            <div class="user">
+                <div class="user-container">
+                    <div class="name"><%= user.full_name %></div>
+                    <i class="material-icons">arrow_drop_down</i>
+                </div>
+
+                <div class="logout-container" style="display: none;" hidden="true">
+                    <a href="/logout">Logout</a>
+                    <i class="material-icons">exit_to_app</i>
+                </div>
+            </div>
+        <% } else { %>
+            <div class="sign-in-container">
+                <a class="sign-in" href="<%= auth_url %>">Sign In</a>
+                <i class="material-icons">person_pin</i>
+            </div>
+        <% } %>
+    </div>

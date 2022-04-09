@@ -1,0 +1,60 @@
+.container {
+    padding-top: 17rem;
+}
+
+.page-title {
+    width: 75vw;
+    min-width: 110rem;
+}
+
+.portal-container {
+    margin-top: 5rem;
+
+    width: 75vw;
+    min-width: 110rem;
+    height: 60rem;
+
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, .4);
+}
+
+.portal-container .card.horizontal {
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    box-shadow: none;
+}
+
+
+.portal-container .card-stacked.signin {
+    background-image: url("/static/images/login-img.jpg");
+}
+
+.portal-container .card-stacked.brother, 
+.portal-container .card-stacked.exec 
+{
+    background-image: url("/static/images/portal-img.jpg");
+}
+
+.card-stacked {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+.card-stacked h2 {
+    margin: 0;
+    min-width: 30rem;
+
+    font-size: 12rem;
+    color: rgba(255, 255, 255, .9);
+    text-align: center;
+    text-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,63 @@
+.profile-container {
+    width: 35vw;
+
+    margin-top: 5rem;
+    padding: 3rem;
+    padding-top: 5rem;
+
+    box-shadow: 0 .5rem 3rem rgba(0, 0, 0, 0.4);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.info-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info-field .input-field {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.info-field .input-field input {
+    font-size: 2.5rem;
+    height: 4rem;
+}
+
+.info-field .input-field label {
+    font-size: 2rem;
+    line-height: .5rem;
+}
+
+.info-field .input-field.button-field {
+    margin: 0;
+}
+
+.info-field .input-field.button-field button {
+    width: 90%;
+    font-size: 1.75rem;
+    transition: box-shadow .25s ease, background-color .25s ease, color .25s ease;
+}
+
+button#update-phone {
+    background-color: #3498db;
+}
+
+button#update-phone:active {
+    background-color: #2980b9;
+}
+
+button#verify-phone{
+    background-color: #2ecc71;
+}
+
+button#verify-phone:active{
+    background-color: #27ae60;
+}

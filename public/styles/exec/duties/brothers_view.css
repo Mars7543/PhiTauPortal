@@ -1,0 +1,123 @@
+.page-title.brothers-view.subtitle h1{
+    margin-bottom: 3rem;
+}
+
+.add-view-duties .btn {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    background-color: #3498db;
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.4);
+    transition: box-shadow .2s, background-color .2s;
+    /* height: 6rem;
+    padding: 2rem; */
+}
+
+.add-view-duties .btn:hover {
+    box-shadow: 0 .15rem .5rem rgba(0, 0, 0, 0.4);
+}
+
+.add-view-duties .btn:active {
+    background-color: #2980b9;
+}
+
+/* .add-view-duties .btn.submit-changes {
+    background-color: rgba(46, 204, 113,1.0);
+}
+
+.add-view-duties .btn.submit-changes:hover {
+    background-color: rgba(39, 174, 96,1.0);
+} */
+
+.brothers-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5rem;
+    gap: 6rem;
+}
+
+/* =========== CLASS STYLES =============== */
+
+.brothers-view .class {
+    width: 40rem;
+    padding: 1rem 5rem 3rem 5rem;
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.brothers-view .class h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+.brothers-view .sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.brothers-view .sort p {
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.brothers-view .sort .select-wrapper {
+    width: 10rem;
+}
+
+/* =========== TABLE STYLES =================== */
+.brothers-view thead, .brothers-view tbody {
+    display: block;
+    width: 100%;
+}
+
+.brothers-view tbody {
+    overflow-y: scroll;
+    height: 48rem;
+}
+
+.brothers-view table tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+
+    transition: background-color .2s, border-botom .2s;
+}
+
+.brothers-view table th {
+    color: #34495e;
+    font-size: 2.5rem;
+}
+
+.brothers-view table td {
+    color: #7f8c8d;
+    font-size: 1.85rem;
+    padding: 0 1rem;
+}
+
+.brothers-view table th:last-of-type, td:last-of-type {
+    text-align: right;
+}
+
+.brothers-view .select-brother {
+    cursor: pointer;
+    user-select: none;
+}
+
+.brothers-view tr[duty-exempt="true"] {
+    background-color:  rgba(241, 196, 15, .6);
+}
+
+.brothers-view .select-brother:hover {
+    background-color:  rgba(46, 204, 113, .5);
+}
+
+.brothers-view .select-brother:active, .brothers-view .select-brother.selected {
+    background-color:  rgba(46, 204, 113, .7);
+}
+
+.brothers-view tr.no-border {
+    border-bottom: none;
+}

@@ -1,0 +1,114 @@
+<%- include ('../partials/exec/header') %>
+
+    <div class="container">
+        <div class="page-title main-title">
+            <h1>Brothers Master Page</h1>
+        </div>
+
+        <div class="page-container">
+            <div class="add-brothers">
+                <h1 class="title">Add Brothers</h1>
+    
+                <div class="class-select">
+                    <p>Mass Add By Class</p>
+                    
+                    <div class="input-field col s12">
+                        <select id="mass-select-class"></select>
+                    </div>
+                </div>
+                
+                <div class="brothers-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>First</th>
+                                <th>Last</th>
+                                <th>Net ID</th>
+                                <th>Class</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody></tbody>
+                    </table>
+                </div>
+    
+                <a class="submit-brothers waves-effect btn btn-large">Submit</a>
+            </div>
+    
+            <div class="view-brothers">
+                <h1 class="title">Active Brothers</h1>
+    
+                <div class="class-select md">
+                    <p>Filter By Class</p>
+                    
+                    <div class="input-field col s12">
+                        <select id="filter-by-class"></select>
+                    </div>
+                </div>
+    
+                <div class="brothers-container">
+                    <table>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="edit-brother" class="modal">
+        <div class="modal-content">
+            <h1 class="title">Edit Brother Info</h1>
+            <div class="edit-container">
+                <div class="form-field">
+                    <div class="input-field">
+                        <input id="first" name="first" type="text">
+                        <label for="first">First Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="last" name="last" type="text">
+                        <label for="last">Last Name</label>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="input-field">
+                        <input id="netid" name="netid" type="text">
+                        <label for="netid">Net ID</label>
+                    </div>
+                    <div class="input-field">
+                        <select></select>
+                          <label id="class-label">Class</label>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <p class="checkbox">
+                        <label>
+                            <input class="filled-in off-campus" type="checkbox" />
+                            <span>Off Campus</span>
+                        </label>
+                    </p>
+
+                    <p class="checkbox">
+                        <label>
+                            <input class="filled-in duty-exempt" type="checkbox" />
+                            <span>Exempt from Duties</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="form-field">
+                    <div class="input-field">
+                        <input id="duty-exemption" disabled name="duty-exemption" type="text" placeholder="Enter Reason Here">
+                        <label for="duty-exemption">Reason for Duty Exemption</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="modal-buttons">
+                <button class="modal-close waves-effect waves-close btn close">Close</button>
+                <button class="modal-close waves-effect waves-edit btn edit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+<%- include ('../partials/exec/footer') %>

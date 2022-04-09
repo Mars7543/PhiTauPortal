@@ -1,0 +1,37 @@
+<%- include ('../partials/exec/header') %>
+
+<% if (auth_error) { %>
+    <div id="auth-error" error="<%= auth_error %>"></div>
+<% } %> 
+
+<% if (signed_in) { %>
+    <div 
+        id="signed-in" 
+        status="<%= signed_in.status %>" 
+        msg="<%= signed_in.msg %>"
+    ></div>
+<% } %> 
+
+<% if (logged_out) { %>
+    <div 
+        id="logged-out" 
+        status="<%= logged_out.status %>" 
+        msg="<%= logged_out.msg %>"
+    ></div>
+<% } %> 
+
+<div class="container">
+    <div class="page-title main-title">
+        <h1>Phi Tau Portal</h1>
+    </div>
+
+    <div class="portal-container">
+        <div class="card horizontal">
+            <div class="card-stacked <%= page %>">
+                <%- include (`./${page === 'signin' ? './signin' : './brother'}`) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('../partials/exec/footer') %>

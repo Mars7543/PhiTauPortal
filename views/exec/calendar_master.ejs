@@ -1,0 +1,212 @@
+<%- include ('../partials/exec/header') %>
+
+    <div class="container">
+        <div class="brothers-view">
+            <div id="page-title">
+                <h1>Brothers View</h1>
+            </div>
+
+            <div class="classes">
+                <div class="class">
+                    <h2>Phi Class</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Duties Assigned</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Miguel Roberts</td><td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Miguel Roberts</td><td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Miguel Roberts</td><td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Miguel Roberts</td><td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Miguel Roberts</td><td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Miguel Roberts</td><td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Miguel Roberts</td><td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Miguel Roberts</td><td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-title">
+            <h1>Assign Waiter Duties</h1>
+        </div>
+
+        <div class="calendar-container">
+            <div class="calendar loading">
+                <div class="preloader-wrapper active">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="month">
+                    <i class="material-icons show-prev-month prev">chevron_left</i>
+                    <div class="date">
+                        <h1></h1>
+                        <p class="show-cur-month inactive"></p>
+                    </div>
+                    <i class="material-icons show-next-month next">chevron_right</i>
+                </div>
+    
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+    
+                <div class="days"></div>
+    
+                <div class="duties-actions">
+                    <button id="unassign-duties" class="btn btn-large waves-effect waves-light">Unassign Duties</button>
+                    <button id="assign-duties" class="btn btn-large waves-effect waves-light">Assign Duties</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="duties-view">
+            <div class="header">
+                <h1>Duties View</h1>
+                <p>January 20 - January 27</p>
+            </div>
+            <div class="duties-container">
+                <div class="preloader-wrapper active">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <table class="striped loading">
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="edit-duty" class="modal">
+        <div class="modal-content">
+            <h1 class="title">Edit Duty</h1>
+            <div class="edit-container">
+                <div class="brother-one">
+                    <h2>Brother 1</h2>
+                    <div class="form-field">
+                        <div class="input-field">
+                            <input id="edit-brother1-firstname" class="autocomplete" name="firstname" type="text">
+                            <label for="edit-brother1-firstname">First Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="edit-brother1-lastname" class="autocomplete" name="lastname" type="text">
+                            <label for="edit-brother1-lastname">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="brother-two">
+                    <h2>Brother 2</h2>
+                    <div class="form-field">
+                        <div class="input-field">
+                            <input id="edit-brother2-firstname" class="autocomplete" type="text">
+                            <label for="edit-brother2-firstname">First Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="edit-brother2-lastname" class="autocomplete" type="text">
+                            <label for="edit-brother2-lastname">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="modal-buttons">
+                <button class="modal-close waves-effect waves-close btn close">Close</button>
+                <button class="modal-close waves-effect waves-edit btn edit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="add-duty" class="modal">
+        <div class="modal-content">
+            <h1 class="title">Add Duty</h1>
+            <div class="add-container">
+                <div class="brother-one">
+                    <h2>Brother 1</h2>
+                    <div class="form-field">
+                        <div class="input-field">
+                            <input id="add-brother1-firstname" class="autocomplete" type="text">
+                            <label for="add-brother1-firstname">First Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="add-brother1-lastname" class="autocomplete" type="text">
+                            <label for="add-brother1-lastname">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="brother-two">
+                    <h2>Brother 2</h2>
+                    <div class="form-field">
+                        <div class="input-field">
+                            <input id="add-brother2-firstname" class="autocomplete" type="text">
+                            <label for="add-brother2-firstname">First Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="add-brother2-lastname" class="autocomplete" type="text">
+                            <label for="add-brother2-lastname">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="modal-buttons">
+                <button class="modal-close waves-effect waves-close btn close">Close</button>
+                <button class="modal-close waves-effect waves-edit btn add">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="invalid-screen none">
+        <h1>Page Size Too Small</h1>
+        <p>Please use a computer or make this window larger to access this page.</p>
+    </div>
+    
+<%- include ('../partials/exec/footer') %>

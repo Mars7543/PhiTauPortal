@@ -1,0 +1,50 @@
+<%- include ('../partials/exec/header') %>
+
+<div class="container">
+    <div class="page-title main-title">
+        <h1 brother-id="<%= user._id %>">My Profile</h1>
+    </div>
+
+    <div class="profile-container">
+        <div class="info-field">
+            <div class="input-field">
+                <input disabled id="first_name" type="text" value="<%= user.name.first %>">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field">
+                <input disabled id="last_name" type="text" value="<%= user.name.last %>">
+                <label for="last_name">Last Name</label>
+            </div>
+        </div>
+
+        <div class="info-field">
+            <div class="input-field">
+                <input disabled id="class" type="text" value="<%= user.class.className %>">
+                <label for="class">Class</label>
+            </div>
+            <div class="input-field">
+                <% if (user.phone) { %>
+                    <input id="phone" type="text" value="<%= user.phone.formatted %>" phone="<%= user.phone.raw %>">
+                <% } else { %>
+                    <input id="phone" type="text" autocomplete="off" placeholder="+1 (xxx) xxx-xxx">
+                <% } %>
+                <label for="phone">Phone #</label>
+            </div>
+        </div>
+        <div class="info-field">
+            <div class="input-field button-field">
+                <button id="update-phone" class="btn btn-large" disabled>Update Phone</button>
+            </div>
+
+            <div class="input-field button-field">
+                <% if (user.phone && !user.phone.verified) { %>
+                    <button id="verify-phone" class="btn btn-large">Verify Phone #</button>
+                <% } else { %>
+                    <button id="verify-phone" class="btn btn-large" dsiabled>Verify Phone #</button>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('../partials/exec/footer') %>

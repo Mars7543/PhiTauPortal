@@ -1,0 +1,92 @@
+<div id="calendar-start" class="page-title subtitle calendar-view-subtitle">
+    <h1>Duties Calendar</h1>
+</div>
+
+<div class="calendar-view">
+    <div class="calendar-container">
+        <div class="calendar loading">
+            <div class="preloader-wrapper active">
+                <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="month">
+                <i class="material-icons show-prev-month prev">chevron_left</i>
+                <div class="date">
+                    <h1></h1>
+                    <p class="show-cur-month inactive"></p>
+                </div>
+                <i class="material-icons show-next-month next">chevron_right</i>
+            </div>
+
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+
+            <div class="days"></div>
+        </div>
+    </div>
+
+    <div class="duties-view">
+        <div class="header">
+            <h1>Duties View</h1>
+            <p></p>
+        </div>
+        <div class="duties-container">
+            <div class="preloader-wrapper active">
+                <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <table class="striped loading">
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="add-edit-duty" class="modal">
+    <div class="modal-content">
+        <h1 class="title"></h1>
+        <div class="add-container">
+            <div class="add-close-container">
+                <button class="btn btn-large waves-effect waves-light choose-brothers">Add Brothers</button>
+                <button class="btn btn-large waves-effect waves-light cancel-duty">Cancel</button>
+            </div>
+
+            <div class="input-field">
+                <input placeholder="Dinner Waiter, Basement Cleanup, etc" id="duty-name" type="text" class="validate">
+                <label for="duty-name">Duty Name</label>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="invalid-screen none">
+    <h1>Page Size Too Small</h1>
+    <p>Please use a computer or make this window larger to access this page.</p>
+</div>

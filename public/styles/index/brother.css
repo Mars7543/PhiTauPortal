@@ -1,0 +1,88 @@
+.brothers-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.brothers-view h2.welcome-back {
+    width: 100%;
+    font-size: 8rem;
+}
+
+.brother-options {
+    margin-top: 9rem;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    /* align-items: center; */
+}
+
+.option {
+    width: 22rem;
+    height: 22rem;
+    padding: 5rem;
+    
+    border: .25rem solid white;
+    border-radius: 6px;
+    background-color: rgba(243, 156, 18, 0.4);
+    box-shadow: 0 0.3rem .6rem rgba(0, 0, 0, .4);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+    
+    transition: background-color .2s;
+}
+
+.option.profile::before {
+    background-image: url('/static/images/joey_face.png');
+}
+
+.option.my-duties::before {
+    background-image: url('/static/images/joey_waiter.png');
+}
+
+.option.assign-duties::before {
+    background-image: url('/static/images/max_robed.png');
+}
+
+.option::before {
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.8;
+
+    transition: opacity .25s;
+}
+
+.option:hover::before {
+    opacity: 1;
+}
+
+.option:hover {
+    cursor: pointer;
+}
+
+.option i {
+    font-size: 5rem;
+}
+
+.option p {
+    text-align: center;
+    line-height: 5rem;
+    font-size: 4.5rem;
+    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+
+    z-index: 2;
+}

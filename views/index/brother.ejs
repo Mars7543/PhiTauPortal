@@ -1,0 +1,21 @@
+<div class="brothers-view">
+    <h2 class="welcome-back">Welcome Back<br><%= user.name.first %></h2>
+    <div class="brother-options">
+        <div class="option profile">
+            <!-- <i class="material-icons">person_outline</i> -->
+            <p>My Profile</p>
+        </div>
+
+        <div class="option my-duties">
+            <!-- <i class="material-icons">sentiment_neutral</i> -->
+            <p>View Duties</p>
+        </div>
+
+        <% if (page === "exec") { %>
+            <div class="option assign-duties">
+                <!-- <i class="material-icons">sentiment_neutral</i> -->
+                <p>Assign Duties</p>
+            </div>
+        <% } %>
+    </div>
+</div>
