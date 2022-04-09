@@ -1,4 +1,3 @@
-const querystring   = require('querystring')
 const axios         = require('axios')
 const jwt           = require('jsonwebtoken')
 const Brother       = require('../models/Brother')
@@ -19,7 +18,9 @@ const getGoogleAuthURL = () => {
         ].join(" ")
     }
 
-    return `${rootURL}?${querystring.stringify(options)}`
+    let queryString = new URLSearchParams(options).toString()
+
+    return `${rootURL}?${queryString}`
 }
 
 const getGoogleOAuthTokens = async code => {
