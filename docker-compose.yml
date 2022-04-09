@@ -11,6 +11,7 @@ services:
 
   node-app:
     build: .
+    image: mar436/phitauportal
     networks:
       - phitau-portal
     volumes:
