@@ -1,3 +1,12 @@
+build:
+	@docker-compose build
+
+push:
+	@docker-compose push node-app
+
+pull:
+	@docker-compose pull node-app
+
 up: 
 	@docker-compose up -d --build --scale node-app=3
 
