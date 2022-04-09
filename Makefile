@@ -1,10 +1,8 @@
-default: compose_up
-
 up: 
-	@docker compose up -d --build --scale node-app=3
+	@docker-compose up -d --build --scale node-app=3
 
 down: 
-	@docker compose down -v
+	@docker-compose down -v
 
 list:
 	@docker ps
