@@ -41,6 +41,9 @@ app.use(express.json())
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }))
 
+// static assetts
+app.use('/static', express.static(path.join(__dirname, 'public')))
+
 // api routes
 app.use('/api/class',       auth.brotherAuth, classAPI)
 app.use('/api/brother',     auth.brotherAuth, brotherAPI)
@@ -56,7 +59,6 @@ app.use('/duties',  auth.brotherAuth, dutiesRouter)
 app.use('/profile', auth.brotherAuth, profileRouter)
 app.use('/', indexRouter)
 
-// static assetts
-app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use('*', async (req, res) => res.render('404'))
 
 module.exports = app

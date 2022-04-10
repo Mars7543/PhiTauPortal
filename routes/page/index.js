@@ -68,4 +68,14 @@ router.get('/', async (req, res) => {
     res.render('index', options)
 })
 
+router.all('*', async (req, res) => {
+    res.render('404', {
+        title   : 'Page Not Found',
+        styles  : ['404.css'], 
+        scripts : [],
+        user: req.user,
+        auth_url: OAuth.getGoogleAuthURL(),
+    })
+})
+
 module.exports = router
