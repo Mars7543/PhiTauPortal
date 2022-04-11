@@ -16,8 +16,8 @@ const get_assignments_from_duties = async (duties, noti_type) => {
                                             .populate('duty')
 
             for (let duty_assignment of duty_assignments) {
-                // only notify brothers with verified phone numbers
-                if (duty_assignment.brother.phone.verified === false)
+                // only notify brothers with verified phone numbers & notifcation settings on
+                if (duty_assignment.brother.notify[noti_type])
                     assignments.push(duty_assignment)
             }
         }

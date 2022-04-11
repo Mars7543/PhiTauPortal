@@ -5,7 +5,8 @@
         <h1 brother-id="<%= user._id %>">My Profile</h1>
     </div>
 
-    <div class="profile-container">
+    <div class="profile-container info-container">
+        <h1 class="container-title">Personal Info</h1>
         <div class="info-field">
             <div class="input-field">
                 <input disabled id="first_name" type="text" value="<%= user.name.first %>">
@@ -19,31 +20,69 @@
 
         <div class="info-field">
             <div class="input-field">
-                <input disabled id="class" type="text" value="<%= user.class.className %>">
+                <input id="class" type="text" value="<%= user.class.className %>" disabled>
                 <label for="class">Class</label>
             </div>
             <div class="input-field">
+                <input id="class" type="text" value="2024" disabled>
+                <label for="class">Graduation Year</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-container notification-container">
+        <h1 class="container-title">Notification Settings</h1>
+
+        <div class="notification-settings">
+            <label>
+                <input type="checkbox" class="filled-in" checked="checked" />
+                <span class="noti-text">Month of</span>
+            </label>
+            <label>
+                <input type="checkbox" class="filled-in" checked="checked" />
+                <span class="noti-text">Week of</span>
+            </label>
+            <label>
+                <input type="checkbox" class="filled-in" checked="checked" />
+                <span class="noti-text">Day before</span>
+            </label>
+            <label>
+                <input type="checkbox" class="filled-in" checked="checked" />
+                <span class="noti-text">Day of</span>
+            </label>
+        </div>
+
+        <div class="info-field phone">
+            <div class="input-field">
                 <% if (user.phone) { %>
-                    <input id="phone" type="text" value="<%= user.phone.formatted %>" phone="<%= user.phone.raw %>">
+                    <input id="phone" type="text" 
+                        saved-phone="<%= user.phone.raw %>" 
+                        phone="<%= user.phone.raw %>"
+                        value="<%= user.phone.formatted %>" 
+                    >
                 <% } else { %>
                     <input id="phone" type="text" autocomplete="off" placeholder="+1 (xxx) xxx-xxx">
                 <% } %>
                 <label for="phone">Phone #</label>
             </div>
+            <div class="input-field button-field">
+                <button id="update-phone" class="btn btn-large" disabled>Update Phone</button>
+            </div>
         </div>
-        <div class="info-field">
+
+        <!-- <div class="button-field">
             <div class="input-field button-field">
                 <button id="update-phone" class="btn btn-large" disabled>Update Phone</button>
             </div>
 
             <div class="input-field button-field">
                 <% if (user.phone && !user.phone.verified) { %>
-                    <button id="verify-phone" class="btn btn-large">Verify Phone #</button>
+                    <button id="verify-phone" class="btn btn-large" disabled>Verify Phone #</button>
                 <% } else { %>
-                    <button id="verify-phone" class="btn btn-large" dsiabled>Verify Phone #</button>
+                    <button id="verify-phone" class="btn btn-large" disabled>Verify Phone #</button>
                 <% } %>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 

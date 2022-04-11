@@ -156,6 +156,29 @@ const update_brother_phone = async (req, res) => {
     }
 }
 
+const update_brother_notify = async (req, res) => {
+    try {
+        const notify = JSON.parse(req.body.notify)
+        const brother = await Brother.findById(req.params.id, { notify }, { new : true })
+
+        res
+            .status(200)
+            .json({
+                status: "Success",
+                brother
+            })
+    } catch (e) {
+        debug(e)
+        res
+            .status(500)
+            .json({ 
+                status: "Failed",
+                msg: "Failed to update phone number.",
+                error: e
+            })
+    }
+}
+
 const delete_brother = async (req, res) => {
     try {
         const brother = await Brother.findByIdAndDelete(req.params.id)
@@ -192,5 +215,6 @@ module.exports = {
     get_brothers_by_class,
     update_brother,
     update_brother_phone,
+    update_brother_notify,
     delete_brother
 }

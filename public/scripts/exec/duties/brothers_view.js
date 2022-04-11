@@ -52,13 +52,14 @@ function sortClass() {
 
 function populate_brother_credits() {
     let $brother_trs = $('.class-table tbody tr')
+    let duty_type = $('#duty-type').attr('duty-type')
 
     $brother_trs.each(function() {
         let $tr = $(this)
         let $td = $tr.children('td.credits')
         
         const id = $tr.attr('brother-id')
-        $.ajax(`/api/assignment/credits/${id}/waiter`, {
+        $.ajax(`/api/assignment/credits/${id}/${duty_type}`, {
             method: 'GET',
             success: ({ credits }) => {
                 $td.attr('credits', credits)

@@ -1,17 +1,54 @@
+/* =========== ============== */
 .profile-container {
-    width: 35vw;
+    min-width: 80rem;
+    width: 80rem;
 
     margin-top: 5rem;
-    padding: 3rem;
-    padding-top: 5rem;
+    padding: 3rem 0;
 
     box-shadow: 0 .5rem 3rem rgba(0, 0, 0, 0.4);
     
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 1rem;
+}
+
+.info-field.notifications-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container h1.container-title {
+    margin-top: 0;
+
+    color: rgba(0,0,0,0.87);
+    /* color: #2c3e50; */
+
+    font-size: 4rem;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+    text-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.profile-container.notification-container h1.container-title {
+    margin-bottom: 1.5rem;
+}
+
+.notification-settings {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.75rem;
+    margin-bottom: 2rem;
+}
+
+.notification-settings label span.noti-text {
+    font-size: 1.5rem;
+    padding-left: 30px;
 }
 
 .info-field {
@@ -20,8 +57,12 @@
     justify-content: space-evenly;
 }
 
+.info-field.phone {
+    justify-content: center;
+    gap: 2rem;
+}
+
 .info-field .input-field {
-    width: 45%;
     display: flex;
     justify-content: center;
 }
@@ -36,14 +77,33 @@
     line-height: .5rem;
 }
 
-.info-field .input-field.button-field {
+.input-field.button-field {
     margin: 0;
 }
 
-.info-field .input-field.button-field button {
-    width: 90%;
+.button-field {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.button-field .input-field.button-field {
+    margin: 0;
+}
+
+.input-field.button-field button.btn-large {
+    margin: 0;
+    width: 20rem;
+    min-width: 20rem;
     font-size: 1.75rem;
+    line-height: normal;
+    height: 52px;
     transition: box-shadow .25s ease, background-color .25s ease, color .25s ease;
+}
+
+.notification-settings [type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: 2px solid #3498db;
+    background-color: #3498db;
 }
 
 button#update-phone {

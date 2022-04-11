@@ -2,14 +2,18 @@
     margin-bottom: 3rem;
 }
 
+.add-view-duties {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
 .add-view-duties .btn {
     font-size: 2rem;
     margin-bottom: 4rem;
     background-color: #3498db;
     box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.4);
     transition: box-shadow .2s, background-color .2s;
-    /* height: 6rem;
-    padding: 2rem; */
 }
 
 .add-view-duties .btn:hover {
@@ -20,13 +24,13 @@
     background-color: #2980b9;
 }
 
-/* .add-view-duties .btn.submit-changes {
-    background-color: rgba(46, 204, 113,1.0);
+.add-view-duties .btn.notify-brothers {
+    background-color: #2ecc71;
 }
 
-.add-view-duties .btn.submit-changes:hover {
-    background-color: rgba(39, 174, 96,1.0);
-} */
+.add-view-duties .btn.notify-brothers:active {
+    background-color: #27ae60;
+}
 
 .brothers-view {
     display: flex;
@@ -121,3 +125,5 @@
 .brothers-view tr.no-border {
     border-bottom: none;
 }
+
+/* ==================== MEDIA QUERIES ========================== */

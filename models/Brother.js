@@ -53,6 +53,33 @@ const brotherSchema = new Schema({
     duty_exempt: {
         type: String,
         default: undefined
+    },
+
+    notify: {
+        semester: {
+            type: Boolean,
+            default: true
+        },
+
+        month: {
+            type: Boolean,
+            default: true
+        },
+
+        week: {
+            type: Boolean,
+            default: true
+        },
+
+        tomorrow: {
+            type: Boolean,
+            default: true
+        },
+
+        day: {
+            type: Boolean,
+            default: true
+        }
     }
 })
 

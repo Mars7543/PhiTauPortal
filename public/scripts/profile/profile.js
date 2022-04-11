@@ -19,7 +19,8 @@ function updatePhone() {
             
             $phone.val(formatted)
             $phone.attr('phone', raw)
-
+            $phone.attr('saved-phone', raw)
+            
             $("#update-phone").attr('disabled', 'disabled')
 
             M.toast({
@@ -102,9 +103,9 @@ function validatePhone() {
         let phone = $(this).attr('phone') || ''
         $(this).attr('phone', phone + key)
 
-        if ($(this).attr('phone').length === 11) {
-            $("#update-phone").removeAttr('disabled')
-        }
+        if ($(this).attr('phone').length === 11 &&
+            $(this).attr('phone') !== $(this).attr('saved-phone')
+        ) $("#update-phone").removeAttr('disabled')
     } else {
         event.preventDefault()
     }
